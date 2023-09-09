@@ -17,4 +17,4 @@
 
 Далее проводилось тестирование пользовательского интерфейса методом позитивного и негативного функционального тестирования c помощью программной библиотеки Selenium .При разработке тест-кейсов были применены следующие техники тест-дизайна: эквивалентное разбиение, анализ граничных значений, таблица принятия решений, диаграмма перехода состояния, попарное тестирование. Список тест-кейсов, чек-лист и баги представлены по ссылке:https://docs.google.com/spreadsheets/d/1qWQ9l6FexMtMsmxvGMjvsypPJmywpNnEBty0l-uES84/edit?usp=sharing
 
-Автотесты представлены в файлах: test_authorization_by_code.py, test_authorization_page.py, test_registration.py 
+Автотесты представлены в файлах: test_authorization_by_code.py, test_authorization.py, test_registration.py 
