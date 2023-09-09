@@ -1,51 +1,51 @@
 import pytest
 
-from .pages.authorization_page_rt import AuthorizationPage
-from .pages.password_recovery_page_rt import PasswordRecoveryPage
+from .pages.authorization_page import AuthorizationPage
+from .pages.password_recovery import PasswordRecoveryPage
 
 
-# проверяем что страница авторизации открывается
+
 @pytest.mark.autorization
 def test_can_open_authorization_page(browser):
     link = "https://lk.rt.ru/"
     page = AuthorizationPage(browser, link)
-    # открываем страницу авторизации
+    
     page.open()
-    # проверяем что открылась именно страница авторизации
+   
     page.should_be_login_page()
 
 @pytest.mark.autorization
 def test_that_telephone_email_login_account_tabs_presented_on_page(browser):
     link = "https://lk.rt.ru/"
     page = AuthorizationPage(browser, link)
-    # открываем страницу авторизации
+   
     page.open()
-    # проверяем что на странице присутствуют табы телефон, имеил,логин,лицевой счет
+    
     page.should_have_tabs()
 
 @pytest.mark.autorization
 def test_that_telephone_tab_is_active_by_default(browser):
     link = "https://lk.rt.ru/"
     page = AuthorizationPage(browser, link)
-    # открываем страницу авторизации
+    
     page.open()
-    # проверяем что таб Телефон выбран по умолчанию
+    
     page.should_have_active_telephone_tab()
 
 @pytest.mark.autorization
 def test_that_logo_is_presented(browser):
     link = "https://lk.rt.ru/"
     page = AuthorizationPage(browser, link)
-    # открываем страницу авторизации
+    
     page.open()
-    # проверяем что на странице есть лого
+  
     page.should_have_logo()
 
 @pytest.mark.autorization
 def test_email_tab_is_active_when_email_is_entered_in_the_field(browser):
     link = "https://lk.rt.ru/"
     page = AuthorizationPage(browser, link)
-    # открываем страницу авторизации
+    
     page.open()
 
     email = "mfporubova@gmail.com"
