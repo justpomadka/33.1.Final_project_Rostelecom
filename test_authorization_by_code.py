@@ -33,7 +33,7 @@ def test_that_code_send_when_email_entered(browser):
     page = AuthorizationByCodePage(browser, link)
     
     page.open()
-    email = "mfporubova@gmail.com"
+    email = "ledi_night@gmail.com"
     page.enter_email(email)
     page.click_get_code_button()
    
